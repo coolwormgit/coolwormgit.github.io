@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OTT-X — fast, remote-first IPTV player for LG webOS</title>
+<meta name="description" content="OTT-X is a fast, remote-first IPTV player for LG webOS. Xtream Codes and M3U playlists, EPG, channel logos, VOD, and optional encrypted Google Drive backup.">
+<style>
+  :root{
+    --bg:#08090c; --panel:#111319; --panel2:#161922; --line:#232833;
+    --txt:#e8ecf4; --dim:#98a2b6; --accent:#38bdf8; --accent2:#22d3ee;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--txt);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 22px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  header{padding:64px 0 40px;text-align:center}
+  .mark{display:inline-flex;align-items:center;gap:16px}
+  .mark svg{width:64px;height:64px;flex:none}
+  .wordmark{font-size:44px;font-weight:800;letter-spacing:-1.5px;line-height:1}
+  .wordmark span{color:var(--accent)}
+  .tag{margin:18px auto 0;max-width:620px;color:var(--dim);font-size:18px}
+
+  .cta{margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:11px 20px;border-radius:10px;font-weight:600;font-size:15px;
+    border:1px solid var(--line);background:var(--panel);color:var(--txt)
+  }
+  .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border-color:transparent;color:#04121b}
+  .btn:hover{text-decoration:none;filter:brightness(1.08)}
+
+  h2{font-size:15px;text-transform:uppercase;letter-spacing:1.4px;color:var(--dim);margin:52px 0 18px;font-weight:700}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .card h3{margin:0 0 6px;font-size:16px}
+  .card p{margin:0;color:var(--dim);font-size:14.5px}
+
+  .privacy{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+  .privacy ul{margin:10px 0 0;padding-left:20px;color:var(--dim)}
+  .privacy li{margin:6px 0}
+  .privacy strong{color:var(--txt)}
+
+  pre{
+    background:#0d0f14;border:1px solid var(--line);border-radius:10px;padding:12px 14px;
+    overflow:auto;font-size:13px;color:#cbd5e1
+  }
+  footer{margin:64px 0 48px;padding-top:22px;border-top:1px solid var(--line);color:var(--dim);font-size:14px;text-align:center}
+  footer p{margin:6px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="mark">
+      <svg viewBox="0 0 64 64" role="img" aria-label="OTT-X">
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#22d3ee"/>
+          </linearGradient>
+        </defs>
+        <rect x="4" y="8" width="56" height="38" rx="7" fill="url(#g)"/>
+        <rect x="9" y="13" width="46" height="28" rx="4" fill="#08090c"/>
+        <path d="M26 20l14 7-14 7z" fill="url(#g)"/>
+        <rect x="24" y="50" width="16" height="4" rx="2" fill="url(#g)"/>
+      </svg>
+      <div class="wordmark">OTT<span>-X</span></div>
+    </div>
+    <p class="tag">A fast, remote-first IPTV player for LG webOS. Built to be driven entirely
+      from the remote you already have — no shortcuts to memorise.</p>
+    <div class="cta">
+      <a class="btn primary" href="privacy.html">Privacy policy</a>
+      <a class="btn" href="#backup">Google Drive backup</a>
+    </div>
+  </header>
+
+  <h2>What it is</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Everything from the remote</h3>
+      <p>Arrow keys, OK, Back, the coloured buttons and 0–9. Categories on the left, channels on
+        the right, with a sliding menu and no hidden key combos.</p>
+    </div>
+    <div class="card">
+      <h3>Xtream Codes and M3U</h3>
+      <p>Sign in with a provider, or load a playlist. Large lists are ordered and preloaded so the
+        list stays responsive while you scroll.</p>
+    </div>
+    <div class="card">
+      <h3>EPG that is actually right</h3>
+      <p>XMLTV guide data, mapped per channel or per category, with program times taken from your
+        device clock so nothing drifts.</p>
+    </div>
+    <div class="card">
+      <h3>Channel logos</h3>
+      <p>Picons are matched automatically, with a per-channel override when the automatic match
+        picks the wrong one.</p>
+    </div>
+    <div class="card">
+      <h3>Live TV, and VOD</h3>
+      <p>The live player watches for drift and rebuffering and quietly resets itself, and the media
+        library browses your provider's movies and series.</p>
+    </div>
+    <div class="card">
+      <h3>Your layout, remembered</h3>
+      <p>Channel order, favourites, categories, EPG mappings and logos are yours — reorder them
+        once and they survive restarts and reinstalls.</p>
+    </div>
+  </div>
+
+  <h2 id="backup">Encrypted backup to your own Google Drive</h2>
+  <div class="privacy">
+    <p>If you turn on Google Drive backup, OTT-X uploads <strong>one file</strong> — a dump of your
+      app settings — into a folder in <strong>your own</strong> Google Drive.</p>
+    <ul>
+      <li>It is encrypted <strong>on the TV, before it is uploaded</strong>, with a PIN you choose
+        (AES-GCM 256, key derived with PBKDF2-SHA256 at 120,000 iterations).</li>
+      <li>Only the app's own folder is ever touched. The requested Google scope is
+        <code>drive.file</code>, which grants access to <strong>nothing else</strong> in your Drive.</li>
+      <li>We operate no servers. There is no OTT-X account, and no analytics of any kind.</li>
+    </ul>
+    <p style="margin-top:14px"><a href="privacy.html">Read the full privacy policy →</a></p>
+  </div>
+
+  <h2>Installing</h2>
+  <p style="color:var(--dim)">OTT-X is distributed as a webOS package (<code>.ipk</code>) and installed
+    on the TV with the webOS CLI over Developer Mode. A companion mobile app talks to the same
+    core.</p>
+  <pre>ares-install -d tv OTT-X_2.0.0_webOS.ipk
+ares-launch  -d tv com.example.ottplay</pre>
+
+  <footer>
+    <p><strong>OTT-X</strong> 2.0.0 · for LG webOS</p>
+    <p><a href="privacy.html">Privacy policy</a> ·
+      <a href="https://github.com/coolwormgit/coolwormgit.github.io/issues">Support</a></p>
+    <p>Not affiliated with, endorsed by, or sponsored by LG Electronics. OTT-X does not provide
+      any channels, playlists or content — you connect it to the provider you already use.</p>
+  </footer>
+
+</div>
+</body>
+</html>

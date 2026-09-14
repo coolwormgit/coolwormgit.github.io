@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OTT-X — Privacy Policy</title>
+<meta name="description" content="Privacy policy for OTT-X, an IPTV player for LG webOS. No accounts, no analytics, no developer servers; optional Google Drive backup is encrypted on your device.">
+<style>
+  :root{
+    --bg:#08090c; --panel:#111319; --line:#232833;
+    --txt:#e8ecf4; --dim:#98a2b6; --accent:#38bdf8; --accent2:#22d3ee;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--bg);color:var(--txt);
+    font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:800px;margin:0 auto;padding:56px 22px 72px}
+  a{color:var(--accent)}
+  h1{font-size:34px;margin:0 0 6px;letter-spacing:-0.8px}
+  h1 span{color:var(--accent)}
+  .sub{color:var(--dim);margin:0 0 8px}
+  h2{font-size:20px;margin:42px 0 10px;padding-top:20px;border-top:1px solid var(--line)}
+  h3{font-size:16px;margin:22px 0 6px}
+  p,li{color:#cfd7e5}
+  ul{padding-left:22px}
+  li{margin:7px 0}
+  code{background:#0d0f14;border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-size:14px}
+  .lead{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:22px 0}
+  .lead p{margin:0}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--dim);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:1px}
+  .back{display:inline-block;margin-bottom:26px;color:var(--dim);font-size:14px}
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:var(--dim);font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="index.html">← OTT-X</a>
+  <h1>Privacy <span>Policy</span></h1>
+  <p class="sub">OTT-X — IPTV player for LG webOS · Last updated: 14 September 2026</p>
+
+  <div class="lead">
+    <p><strong>In one paragraph:</strong> OTT-X has no user accounts and no servers of ours. We do
+      not collect, see, sell or share your data, and the app contains no analytics, advertising or
+      tracking. Everything you configure lives on your own device. The only optional transfer of your
+      data off the device is the Google Drive backup, which you switch on yourself, which goes to
+      <em>your own</em> Google Drive, and which is encrypted on the device with a PIN before it is
+      uploaded — we can never read it.</p>
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>OTT-X is an independently developed IPTV/OTT player application for LG webOS televisions (and a
+    companion mobile app sharing the same core). In this policy, "the app" means OTT-X, and "we"
+    means its developer. The app plays streams that you supply through a provider or playlist you
+    already have; we provide no channels, content or playlists.</p>
+
+  <h2>2. Data we collect</h2>
+  <p><strong>None.</strong> We do not operate any backend service for the app, and the app sends us
+    nothing. There is no OTT-X account, no sign-up, no telemetry, no crash reporting to us, no usage
+    statistics and no advertising identifier.</p>
+
+  <h2>3. What the app stores, and where</h2>
+  <p>All of the following is stored <strong>locally on your device</strong> and never leaves it
+    unless you enable the backup described in section 5:</p>
+  <ul>
+    <li>the IPTV provider details you enter (server address, username, password) or your playlist URL;</li>
+    <li>your channel order, category order, favourites, hidden channels and channel logo overrides;</li>
+    <li>your EPG sources and the channel-to-guide mappings you make;</li>
+    <li>app preferences such as language, font size and sorting;</li>
+    <li>if you enable the Drive backup, a cryptographically derived <em>verifier</em> that lets the
+      app recognise the correct PIN. This is not the PIN and not a decryption key, and it cannot be
+      used to decrypt anything.</li>
+  </ul>
+  <p>Uninstalling the app removes this local data.</p>
+
+  <h2>4. Network connections the app makes</h2>
+  <p>OTT-X talks only to endpoints that are necessary to do what you asked, and only to destinations
+    you control or that are inherent to the feature you enabled:</p>
+  <table>
+    <tr><th>Destination</th><th>Why</th><th>What is sent</th></tr>
+    <tr>
+      <td>Your IPTV provider</td>
+      <td>Sign-in, channel list, guide, video streams, logo images</td>
+      <td>Your provider credentials and stream requests — as any IPTV player must</td>
+    </tr>
+    <tr>
+      <td>EPG/XMLTV sources you add</td>
+      <td>Downloading guide data</td>
+      <td>A plain file request for the URL you configured</td>
+    </tr>
+    <tr>
+      <td><code>googleapis.com</code> (only if you enable Drive backup)</td>
+      <td>Signing in and uploading/downloading your encrypted backup</td>
+      <td>An OAuth token exchange and the encrypted backup file</td>
+    </tr>
+    <tr>
+      <td>Public logo repositories (e.g. <code>github.com/tv-logo/tv-logos</code>)</td>
+      <td>Fetching channel logos when your provider has none</td>
+      <td>A plain image request — no data about you</td>
+    </tr>
+    <tr>
+      <td>A push service you configure yourself (Telegram or ntfy)</td>
+      <td>Sending the Google sign-in link to your own phone, which you set up</td>
+      <td>The sign-in link only, to a channel you chose</td>
+    </tr>
+  </table>
+  <p>Video streams are played directly between your device and your provider. We are never in the
+    middle and cannot see what you watch.</p>
+
+  <h2 id="drive">5. Google Drive backup (optional, off by default)</h2>
+  <p>If you choose <em>Back up now</em> and sign in with Google, the app uploads a single file
+    containing a dump of the app settings listed in section 3.</p>
+  <h3>What we ask Google for</h3>
+  <p>The app requests exactly one permission:
+    <code>https://www.googleapis.com/auth/drive.file</code>. This grants access to
+    <strong>only the files and folders the app itself creates</strong>. The app cannot see, read,
+    modify or delete any other file in your Drive, and it cannot see your email contacts or
+    anything else about your Google account.</p>
+  <h3>Where it goes</h3>
+  <p>Into a folder named <strong>OTT Play Backups</strong> in <em>your own</em> Google Drive. It is
+    not sent to us and there is no copy on any server of ours.</p>
+  <h3>How it is protected</h3>
+  <ul>
+    <li>The backup is encrypted <strong>on your device, before upload</strong>, using AES-GCM with a
+      256-bit key derived from a PIN you enter, by PBKDF2-SHA256 with 120,000 iterations.</li>
+    <li>Neither Google nor we ever see your PIN or the contents of the backup. Without the PIN the
+      file cannot be opened by anyone, including us.</li>
+    <li>The sign-in uses Google's OAuth device flow. Your Google password is typed on Google's own
+      page, never in the app, and the app never receives it.</li>
+  </ul>
+  <h3>Retention and deletion</h3>
+  <p>The app keeps the 10 most recent backups in that folder and deletes older ones it created.
+    You can delete the folder or any file at any time in Google Drive yourself, and the app's
+    <em>Disconnect</em> option stops using the connection and forgets the stored token. To revoke
+    the app's access entirely, visit
+    <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> and
+    remove OTT-X.</p>
+
+  <h2>6. What we never do</h2>
+  <ul>
+    <li>We do not sell, rent or share your data with anyone — we do not have it.</li>
+    <li>We do not use analytics, crash reporting, advertising SDKs or device fingerprinting.</li>
+    <li>We do not build profiles of what you watch.</li>
+    <li>We do not require an account, an email address or any personal detail to use the app.</li>
+  </ul>
+
+  <h2>7. Security</h2>
+  <p>Backups are end-to-end encrypted with your PIN as described above, and the app stores only a
+    PIN verifier rather than the PIN or any key. Communication with Google and with your provider
+    uses HTTPS. As with any application, the security of your provider credentials also depends on
+    the physical security of your device: the settings are stored locally, so treat the TV itself as
+    you would any device holding a password.</p>
+
+  <h2>8. Children</h2>
+  <p>OTT-X is not directed at children under 13. Because the app collects no personal data at all,
+    it does not knowingly collect data from children or anyone else.</p>
+
+  <h2>9. Your rights</h2>
+  <p>Data protection laws such as the GDPR give you rights of access, correction, deletion,
+    restriction and portability over personal data held about you. We hold no personal data about
+    you, so there is nothing for us to disclose, correct or erase. The data on your device is under
+    your direct control: you can change it in the settings, and remove it entirely by uninstalling
+    the app or by deleting the backup folder from your Google Drive.</p>
+
+  <h2>10. Changes to this policy</h2>
+  <p>If this policy changes, the "last updated" date above changes with it, and the current version
+    always lives at this address. Material changes affecting the backup feature will also be
+    described in the app's release notes.</p>
+
+  <h2>11. Contact</h2>
+  <p>Questions about this policy or about privacy in OTT-X:
+    <a href="https://github.com/coolwormgit/coolwormgit.github.io/issues">open an issue on the
+    project repository</a>.</p>
+
+  <footer>
+    OTT-X 2.0.0 · for LG webOS. Not affiliated with, endorsed by, or sponsored by LG Electronics,
+    Google LLC, or any IPTV provider. Google Drive is a service of Google LLC and is used only with
+    your permission, under Google's own terms.
+  </footer>
+
+</div>
+</body>
+</html>
